@@ -1,5 +1,6 @@
 body {
-  font-family: 'Pangolin', cursive;;
+  font-family: "Pangolin", cursive;
+  color: #fff;
   background: #0f0c29; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -13,4 +14,356 @@ body {
     #302b63,
     #0f0c29
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/*CONTACTO*/
+.contentt {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.logo {
+  text-align: center;
+  font-size: 3em;
+}
+
+.logo span {
+  color: #ee8621;
+}
+
+.contact-wrapper > * {
+  padding: 1em;
+}
+
+.contact-form {
+  background: white;
+  color: black;
+}
+
+.contact-form h3{
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.contact-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contact-form form label {
+  display: block;
+}
+
+.contact-form form p {
+  margin: 0;
+  padding: 1em;
+}
+
+.contact-form form .block {
+  grid-column: 1 / 3;
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+  width: 100%;
+  padding: .7em;
+  border: none;
+  background: none;
+  outline: 0;
+  color: rgb(151, 144, 144);
+  border: 1px solid #e29b55;
+  border-radius: 5px;
+}
+
+.contact-form form button:focus,
+.contact-form form input:focus,
+.contact-form form textarea:focus{
+  box-shadow: 0px 0px 1px #d47f2a inset;
+  color: black;
+}
+
+.contact-form form button {
+  background: #ee8621;
+  border: 0;
+  color: white;
+  text-transform: uppercase;
+  padding: 1em;
+}
+
+.contact-form form button:hover,
+.contact-form form button:hover {
+  background: #da9551;
+  color: #fff;
+  transition: background-color 1s ease-out;
+  outline: 0;
+}
+
+/* CONTACT INFO */
+.contact-info {
+  background: #343a40;
+}
+
+.contact-info h4, .contact-info ul, .contact-info p {
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+/* LARGE SIZE */
+@media(min-width: 700px) {
+  .contact-wrapper {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+  }
+  .contact-wrapper > * {
+      padding: 2em;
+  }
+  .contact-info h4,
+  .contact-info ul,
+  .contact-info p {
+      text-align: left;
+  }
+}
+
+/*TARGETAS PROYECTOS*/
+#proyectos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-cards{
+  position: relative;
+  width: 1100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+.container-cards h1{
+display: block;
+width: 100%;
+text-align: center;
+margin-top: 10px;
+margin-bottom: 25px;
+}
+
+.container-cards .card{
+  position: relative;
+  max-width: 300px;
+  height: 215px;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 300ms ease-in-out;
+}
+
+.container-cards .card:hover{
+  height: 395px;
+}
+
+.container-cards .card .imgBx{
+  position: relative;
+  width: 260px;
+  height: 260px;
+  top: -60px;
+  left: 5px;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container-cards .card .imgBx img{
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.container-cards .card .info-card{
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  transition: 300ms ease-in-out;
+}
+
+.container-cards .card:hover .info-card{
+  visibility: visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: 300ms;
+}
+
+hr{
+  background: white;
+}
+
+/*TARGETAS TECNOLOGIAS*/
+#tecnologias{
+  width: 80%;
+  margin-left: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card2{
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 210px 80px;
+  grid-template-areas: "image" "text" "stats";
+  margin-top: 30px;
+  margin-left: 60px;
+  margin-bottom: 80px;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.9);
+  text-align: center;
+
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.card-image{
+  grid-area: image;
+  background: url("/img/1.jpg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+.card-text{
+  grid-area: text;
+  margin: 25px;
+}
+
+.card-text p{
+  color: gray;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.card-text  h2{
+  margin-top: 0px;
+  font-size: 28px;
+  color: black;
+}
+
+.card-stats{
+  grid-area: stats;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(255, 7, 110);
+}
+
+.card-stats .stat{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  color: white;
+}
+
+.card-stats .type{
+  font-size: 11px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.card-stats .value{
+  font-size: 22px;
+  font-weight: 500;  
+}
+
+.card-stats .border{
+  border-left: 1px solid rgb(172, 26, 87);
+  border-right: 1px solid rgb(172, 26, 87);
+}
+
+.card-stats .value sup{
+  font-size: 12px;
+}
+
+.card2:hover{
+  transform: scale(1.1);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+/*footer redes sociales*/
+footer .redes-sociales {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	padding: 20px;
+	flex-wrap: wrap;
+}
+
+footer .redes-sociales a {
+	display: block;
+  margin: 10px;
+	text-align: center;
+}
+
+footer .redes-sociales a i {
+	font-size: 50px;
+  line-height: 50px;
+  color: #343a40;
+  transition: all 300ms;
+}
+footer .redes-sociales a i:hover{
+  color: #ee8621;
+}
+
+
+@keyframes icono {
+	from {
+		transform: rotate3d(0,0,0,0);
+	}
+	to {
+		transform: rotate3d(0,1,0, 360deg);
+	}
+}
+
+/*Footer copy*/
+
+footer .copyright {
+  color: #999;
+  margin-top: 5px;
+  text-align: center;
+  font-size: 1em;
+}
+
+footer .copyright .menu {
+  list-style: none;
+  padding-left: 0;
+}
+
+footer .copyright .menu li {
+  border-left: solid 1px #e0e0e0;
+  display: inline-block;
+  padding: 0 0 0 1em;
+  margin: 0 0 0 1em;
+}
+
+footer .copyright .menu li:first-child {
+  border-left: 0;
+  margin-left: 0;
+  padding-left: 0;
 }

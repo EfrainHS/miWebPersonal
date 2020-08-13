@@ -17,6 +17,12 @@ body {
 }
 
 /*CONTACTO*/
+#contacto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 .contentt {
   max-width: 1170px;
   margin-left: auto;
@@ -32,6 +38,7 @@ ul {
 .logo {
   text-align: center;
   font-size: 3em;
+  margin-top: -60px;
 }
 
 .logo span {
@@ -137,6 +144,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 .container-cards{
@@ -210,102 +218,157 @@ hr{
   background: white;
 }
 
-/*TARGETAS TECNOLOGIAS*/
-#tecnologias{
-  width: 80%;
-  margin-left: 8%;
+/*SEGHUNDAS CARDS*/
+.tecnologias{
   display: flex;
-  align-items: center;
   justify-content: center;
-  overflow: hidden;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.card2{
-  display: grid;
-  grid-template-columns: 300px;
-  grid-template-rows: 210px 210px 80px;
-  grid-template-areas: "image" "text" "stats";
-  margin-top: 30px;
-  margin-left: 60px;
-  margin-bottom: 80px;
-  border-radius: 18px;
-  background: white;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.9);
+.container-cards2{
+  position: relative;
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.container-cards2 h1{
+  display: block;
+  width: 100%;
   text-align: center;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  }
 
-  transition: 0.5s ease;
-  cursor: pointer;
-}
-
-.card-image{
-  grid-area: image;
-  background: url("/img/1.jpg");
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  background-size: cover;
-}
-
-.card-text{
-  grid-area: text;
-  margin: 25px;
-}
-
-.card-text p{
-  color: gray;
-  font-size: 15px;
-  font-weight: 300;
-}
-
-.card-text  h2{
-  margin-top: 0px;
-  font-size: 28px;
-  color: black;
-}
-
-.card-stats{
-  grid-area: stats;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background: rgb(255, 7, 110);
-}
-
-.card-stats .stat{
+.tecnologias .card2{
+  position: relative;
+  height: 250px;
+  background: #fff;
   display: flex;
-  align-items: center;
+  width: 45%;
+  margin: 30px 0;
+}
+
+.tecnologias .card2 .imgBx2{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  z-index: 1;
+  display: flex;
   justify-content: center;
-  flex-direction: column;
-  padding: 10px;
-  color: white;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
 }
 
-.card-stats .type{
-  font-size: 11px;
-  font-weight: 300;
-  text-transform: uppercase;
+.tecnologias .card2:hover .imgBx2{
+  width: 150px;
+  height: 150px;
+  left: -75px;
+  top: calc(50% - 75px);
+  transition: 0.5s ease-in-out;
+  background: #ff0057;
 }
 
-.card-stats .value{
-  font-size: 22px;
-  font-weight: 500;  
+.tecnologias .card2 .imgBx2:before{
+  content: attr(data-text);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 6em;
+  color: rgba(255, 255, 255, .05);
+  font-weight: 700;
 }
 
-.card-stats .border{
-  border-left: 1px solid rgb(172, 26, 87);
-  border-right: 1px solid rgb(172, 26, 87);
+.tecnologias .card2 .imgBx2 img{
+  max-width: 100px;
+  transition: 0.5s ease-in-out;
 }
 
-.card-stats .value sup{
-  font-size: 12px;
+.tecnologias .card2:hover .imgBx2 img{
+  max-width: 75px;
 }
 
-.card2:hover{
-  transform: scale(1.1);
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+.tecnologias .card2 .info-card2{
+  position: absolute;
+  right: 0;
+  width: calc(100% - 75px);
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.tecnologias .card2 .info-card2 h3{
+  margin-bottom: 5px;
+  font-size: 24px;
+  color: #111;
+}
+
+.tecnologias .card2 .info-card2 p{
+  color: #111;
+}
+
+.tecnologias .card2 .info-card2 a{
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px  10px;
+  background: #333;
+  text-decoration: none;
+  color: #fff;
+}
+
+@media (max-width: 992px){
+  .tecnologias{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tecnologias .car2{
+    width: 400px;
+  }
+}
+
+@media (max-width: 768px){
+  .tecnologias .card2{
+    max-width: 300px;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .tecnologias .card2 .imgBx2{
+    position: relative;
+  }
+
+  .tecnologias .card2 .imgBx2,
+  .tecnologias .card2:hover .imgBx2{
+    width: 100%;
+    height: 200px;
+    left: 0;
+  }
+
+  .tecnologias .card2 .imgBx2 img,
+  .tecnologias .card2:hover .imgBx2 img{
+    max-width: 100px;
+  }
+
+  .tecnologias .card2 .info-card2{
+    position: relative;
+    width: 100%;
+  }
+}
 /*footer redes sociales*/
 footer .redes-sociales {
 	display: flex;
@@ -331,14 +394,78 @@ footer .redes-sociales a i:hover{
   color: #ee8621;
 }
 
+/*Inicio de sesion*/
+#login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
-@keyframes icono {
-	from {
-		transform: rotate3d(0,0,0,0);
-	}
-	to {
-		transform: rotate3d(0,1,0, 360deg);
-	}
+.user-img{
+  margin-top: -120px;
+  margin-bottom: 35px;
+}
+
+.user-img img{
+  width: 150xp;
+  height: 150px;
+  box-shadow: 0px 0px 3px #848484;
+  border-radius: 50%;
+}
+
+.box{
+  width: 400px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #191919;
+  text-align: center;
+  box-shadow: 0px 0px 3px #848484;
+}
+
+.box h1{
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.box input[type = "email"],.box input[type = "password"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #52bfcb;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.box input[type = "email"]:focus,.box input[type = "password"]:focus{
+  width: 280px;
+  border-color: #ee8621;
+}
+.box input[type = "submit"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #52bfcb;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.box input[type = "submit"]:hover{
+  background: #ee8621;
 }
 
 /*Footer copy*/

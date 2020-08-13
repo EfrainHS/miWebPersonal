@@ -1,0 +1,33 @@
+CREATE DATABASE miSite;
+
+USE miSite;
+
+-- TABLA PARA USUARIOS --
+CREATE TABLE users (
+    id INT(11) NOT NULL,
+    username VARCHAR(30) NOT NULL,
+    password VARCHAR(50) NOT NULL,
+    email VARCHAR (50) NOT NULL
+);
+
+ALTER TABLE users ADD PRIMARY KEY (id);
+
+ALTER TABLE users MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
+
+DESCRIBE users;
+
+-- TABLA PARA PUBLICACIONES --
+
+CREATE TABLE posts (
+    id INT (11) NOT NULL,
+    title VARCHAR (50) NOT NULL,
+    description TEXT,
+    user_id INT (11),
+    CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+ALTER TABLE posts ADD PRIMARY KEY (id);
+
+ALTER TABLE posts MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
+
+DESCRIBE posts;

@@ -9,49 +9,51 @@
 <body>
     <%- include ('partials/navigation.html')%>
     
-    <div class="contentt">
-      <h1 class="logo">Contacta <span>Conmigo!</span></h1>
-      <div class="contact-wrapper animate__animated animate__headShake">
-        <div class="contact-form">
-          <h3>Contactame</h3>
-            <form action="">
-              <p>
-                <label>Nombre completo</label>
-                <input type="text" name="fullname">
-              </p>
-              <p>
-                <label>Correo electronico</label>
-                <input type="email" name="email">
-              </p>
-              <p>
-                <label>Numero de telefono</label>
-                <input type="tel" name="phone">
-              </p>
-              <p>
-                <label>Asunto</label>
-                <input type="text" name="affair">
-              </p>
-              <p class="block">
-                <label>Mensaje</label> 
-                <textarea name="message" rows="3"></textarea>
-              </p>
-              <p class="block">
-                <button>Enviar</button>
-              </p>
-            </form>
-          </div>
-
-          <div class="contact-info">
-            <h4>Más Información</h4>
-            <ul>
-              <li><i class="fas fa-map-marker-alt"></i> Alto Lucero de Gutierrez Barrios</li>
-              <li><i class="fas fa-phone"></i> (279) 116 3545</li>
-              <li><i class="fas fa-envelope-open-text"></i> hsefrain@gmail.com</li>
-            </ul>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero provident ipsam necessitatibus repellendus?</p>
+    <section id="contacto">
+        <div class="contentt animate__animated animate__shakeX">
+          <h1 class="logo">Contacta <span>Conmigo!</span></h1>
+          <div class="contact-wrapper">
+            <div class="contact-form">
+              <h3>Contactame</h3>
+                <form action="">
+                  <p>
+                    <label>Nombre completo</label>
+                    <input type="text" name="fullname">
+                  </p>
+                  <p>
+                    <label>Correo electronico</label>
+                    <input type="email" name="email">
+                  </p>
+                  <p>
+                    <label>Numero de telefono</label>
+                    <input type="tel" name="phone">
+                  </p>
+                  <p>
+                    <label>Asunto</label>
+                    <input type="text" name="affair">
+                  </p>
+                  <p class="block">
+                    <label>Mensaje</label> 
+                    <textarea name="message" rows="3"></textarea>
+                  </p>
+                  <p class="block">
+                    <button>Enviar</button>
+                  </p>
+                </form>
+              </div>
+    
+              <div class="contact-info">
+                <h4>Más Información</h4>
+                <ul>
+                  <li><i class="fas fa-map-marker-alt"></i> Alto Lucero de Gutierrez Barrios</li>
+                  <li><i class="fas fa-phone"></i> (279) 116 3545</li>
+                  <li><i class="fas fa-envelope-open-text"></i> hsefrain@gmail.com</li>
+                </ul>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero provident ipsam necessitatibus repellendus?</p>
+              </div>
           </div>
       </div>
-  </div>
+    </section>
 
     <%- include ('partials/footer.html')%>
 </body>
